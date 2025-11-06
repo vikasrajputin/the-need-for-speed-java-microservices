@@ -1,0 +1,52 @@
+# Build artifacts
+/build/
+/target/
+!target/micronaut-server-*.jar # If you want to keep the final JAR for deployment
+
+# IDE-specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+build/
+*.log
+!gradle-wrapper.jar # If you are using Gradle wrapper
+
+# Kotlin
+*.kotlin_module
+.api_build/
+
+# Java
+*.class
+
+# Logs
+logs/
+*.log
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Micronaut-specific
+# If you are using Micronaut AOT, you might have generated classes
+# in specific directories that you want to ignore.
+# For example:
+/src/main/generated/
+/src/test/generated/
