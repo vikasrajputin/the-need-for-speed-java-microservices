@@ -15,11 +15,13 @@
  */
 package com.dhavalgajjar.micronaut.metrics.crypto;
 
+import io.micronaut.context.annotation.Requires;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.QueryValue;
 import io.micronaut.http.client.annotation.Client;
 
 @Client(id = "kucoin")
+@Requires(property = "crypto.mock.enabled", value = "false", defaultValue = "false")
 public interface PriceClient {
     @Get("/api/v1/market/orderbook/level1")
     BitcoinPrice latest(@QueryValue String symbol);

@@ -50,7 +50,10 @@ public class CryptoService {
         time.record(() -> {
             try {
                 checks.increment();
+                log.info("Checking Bitcoin price");
+                log.info("Current Bitcoin price before: ${}", priceClient.latestInUSD().getPrice());
                 latestPriceUsd.set((int) priceClient.latestInUSD().getPrice());
+                log.info("Latest Bitcoin price: ${}", latestPriceUsd.get());
             } catch (Exception e) {
                 log.error("Problem checking price", e);
             }
